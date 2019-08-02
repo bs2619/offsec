@@ -1,0 +1,13 @@
+Find command search files in a directory for the fact that we specify here as the root “/”
+
+	find / -type d \( -perm -g+w -or -perm -o+w \) -exec ls -adl {} \; 2>/dev/null
+	
+	THIS WORKS AWESOME!!!!
+
+
+“-type” specifies the type of object you are looking for. “F” for file and “d” for directory
+” ! path “/ proc / *” -prune “to exclude the” / proc ” which always takes a lot of profit
+“perm” used to search a given permission, here ‘o + w” or “2” that is the octal value of the license “w” write for “other” users
+“- exec ‘to execute a command
+” -lg ls {} ” will list the files in a list format (” l “) without displaying the owner – (” g “) from the root
+” 2> / dev / null ” is used to redirect errors to a null file
