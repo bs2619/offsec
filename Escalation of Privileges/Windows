@@ -1,5 +1,14 @@
 
-
-wget https://www.fuzzysecurity.com/tutorials/files/wmic_info.rar
-
-unrar x wmic_info.rar
+https://www.fuzzysecurity.com/tutorials/16.html
+  
+  wget https://www.fuzzysecurity.com/tutorials/files/wmic_info.rar
+  unrar x wmic_info.rar
+  ./wmic_info.rar
+   
+ https://download.sysinternals.com/files/SysinternalsSuite.zip
+ unzip SysinternalsSuite.zip -d sysinternal/
+ 
+ 
+ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
+ 
+ 
