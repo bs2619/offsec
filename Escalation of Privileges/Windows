@@ -1,0 +1,5 @@
+
+
+wget https://www.fuzzysecurity.com/tutorials/files/wmic_info.rar
+
+unrar x wmic_info.rar
