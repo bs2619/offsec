@@ -1,14 +1,35 @@
 
-https://www.fuzzysecurity.com/tutorials/16.html
-  
-  wget https://www.fuzzysecurity.com/tutorials/files/wmic_info.rar
-  unrar x wmic_info.rar
-  ./wmic_info.rar
-   
- https://download.sysinternals.com/files/SysinternalsSuite.zip
- unzip SysinternalsSuite.zip -d sysinternal/
+ 1) REcommended Blogs
+     https://www.fuzzysecurity.com/tutorials/16.html
+
+    wget https://www.fuzzysecurity.com/tutorials/files/wmic_info.rar
+    unrar x wmic_info.rar
+    ./wmic_info.rar
+
+    https://download.sysinternals.com/files/SysinternalsSuite.zip
+    unzip SysinternalsSuite.zip -d sysinternal/
+
+
+   https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
  
  
- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
+ 2) MS11-080 AfdJoinLeaf Privilege Escalation vulnerability (afd.sys)
  
- 
+		Affecting both the 32 and 64 bit versions of Windows XP and Windows 2003.
+			https://www.exploit-db.com/exploits/18176 
+		check for python installed.
+		PyInstaller module to create a stand-alone Windows executable from a Python script
+			After installing PyWin32 in a Windows environment, and extracting the Pyinstaller files (located in the Tools directory on your
+			Windows 7 lab machine), we create the stand-alone executable we need.
+			
+			python pyinstaller.py --onefile ms11-080.py  (should be run on win test machine)
+					on victim machine c:\>ms11-080.exe -O XP
+					
+3) Windows Configuration Issues
+	
+	 a) Incorrect File and Service Permissions		
+	 		icacls
+			The icacls windows utility allows us to check for these insecure permissions.used to modify NTFS file system permissions in 				Windows Server 2003 SP2, Windows Server 2008, Windows Vista and Windows 7.
+			icacls service.exe
+			
+			
