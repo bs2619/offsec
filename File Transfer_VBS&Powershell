@@ -44,3 +44,9 @@ Now, we can use PowerShell to run the script and download our file:
 	C:\Users\Offsec> powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File wget.ps1
 	
 Using debug.exe to Transfer Files
+
+This will be useful in scenarios where we cannot download any exe to the system. Here, we will convert the exe into txt(hex) using exe2bat kali tool and then transfer it. On the victim machine, again convert the downloaded txt(hex) into binary using the debug.exe utility.
+Another common file transfer method employed against 32 bit Windows operating
+systems is the debug.exe utility. The debug.exe program acts as an assembler,
+disassembler, and a hex dumping tool.
+See the pdf for the perfect example of nc.
