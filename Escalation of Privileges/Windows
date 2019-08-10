@@ -13,6 +13,33 @@
    https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
  
  
+ =================TOOLS===============================
+ Lot of scripts/binaries are mentioned in the blog. We will use the most trusted ones say from pentest or secwiki..
+ 
+ windows-privesc-chk
+ 	Windows-privesc-check is standalone executable that runs on Windows systems. It tries to find misconfigurations that could allow 		local unprivileged users to escalate privileges to other users or to access local apps (e.g. databases).
+  
+  	https://github.com/pentestmonkey/windows-privesc-check/raw/master/windows-privesc-check2.exe
+ 	
+	C:\>windows-privesc-check2.exe --audit -a -o wpc-report
+	
+	
+	The -T option checks for missing patches and advises about public exploits
+		Assuming you've downloaded the spreadsheet and saved it as ms-patch-info.xlsx on the system you're auditing (in the same 				directory as windows-privesc-check is run from) you can use the -T option without an Internet connection:	
+		
+		https://download.microsoft.com/download/6/7/3/673E4349-1CA5-40B9-8879-095C72D5B49D/BulletinSearch.xlsx
+	
+ 		windows-privesc-check2.exe --audit -T ms-patch-info.xlsx -o report
+		
+		
+https://github.com/SecWiki/windows-kernel-exploits
+
+
+For services and misconfiguration and system enumeration ; follow the blog: particularly for seeing the firewall state and passwords
+https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html
+
+
+
  2) MS11-080 AfdJoinLeaf Privilege Escalation vulnerability (afd.sys)
  
 		Affecting both the 32 and 64 bit versions of Windows XP and Windows 2003.
